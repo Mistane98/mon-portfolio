@@ -1,0 +1,19 @@
+<section class="home-section">
+  <div class="home-content">
+    <h1 class="home-title">Bonjour, je suis <span class="name">MAMADOU GHOURANE BAH</span></h1>
+    <p class="home-subtitle">Je suis <span class="typed-text"></span></p>
+
+    <div class="home-buttons">
+      <a routerLink="/projects" class="btn btn-primary">Voir mes projets</a>
+      <a routerLink="/contact" class="btn btn-secondary">Contactez-moi</a>
+    </div>
+  </div>
+
+  <!-- Background animé avec bulles et formes -->
+  <div class="home-animation">
+    <span class="bubble" *ngFor="let b of bubbles"></span>
+    <svg class="animated-shape" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="rgba(255,255,255,0.05)" d="M0,224L48,197.3C96,171,192,117,288,90.7C384,64,480,64,576,106.7C672,149,768,235,864,234.7C960,235,1056,149,1152,122.7C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <a class="navbar-brand" routerLink="/">MonPortfolio</a>
+
+
+  
+
+  <div id="navMenu" class="collapse navbar-collapse">
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()">
+  ☰
+  </button>
+    <ul class="navbar-nav ms-auto" [class.show]="menuOpen">
+      <li class="nav-item"><a routerLink="/" routerLinkActive="active" class="nav-link">Accueil</a></li>
+      <li class="nav-item"><a routerLink="/about" routerLinkActive="active" class="nav-link">À propos</a></li>
+      <li class="nav-item"><a routerLink="/skills" routerLinkActive="active" class="nav-link">Compétences</a></li>
+      <li class="nav-item"><a routerLink="/resume" routerLinkActive="active" class="nav-link">Parcours</a></li>
+      <li class="nav-item"><a routerLink="/projects" routerLinkActive="active" class="nav-link">Projets</a></li>
+      <li class="nav-item"><a routerLink="/github" routerLinkActive="active" class="nav-link">GitHub</a></li>
+      <li class="nav-item"><a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+

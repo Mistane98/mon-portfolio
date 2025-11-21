@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "title": "Site vitrine Angular",
+    "description": "Portfolio personnel construit avec Angular (PWA).",
+    "link": "https://github.com/TON_USERNAME/mon-portfolio"
+  },
+  {
+    "id": "2",
+    "title": "API Node",
+    "description": "Backend Express pour envoi d'emails via SendGrid.",
+    "link": ""
+  }
+]

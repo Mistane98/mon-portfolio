@@ -1,0 +1,23 @@
+<h2>📊 Statistiques GitHub</h2>
+
+<div *ngIf="loading">Chargement...</div>
+
+<div *ngIf="user">
+  <h3>{{ user.name }} (@{{ user.login }})</h3>
+  <p>Dépôts publics : {{ user.public_repos }}</p>
+</div>
+
+<hr>
+
+<h4>🔥 5 derniers dépôts</h4>
+<div *ngFor="let repo of repos" class="card p-3 mt-2">
+  <h5>{{ repo.name }}</h5>
+  <p>{{ repo.description || 'Aucune description' }}</p>
+  <p><strong>Langage :</strong> {{ repo.language }}</p>
+  <a [href]="repo.html_url" target="_blank" class="btn btn-primary btn-sm">Voir sur GitHub</a>
+</div>
+
+<hr>
+
+<h4>📌 Répartition des langages (graphique)</h4>
+<canvas #chartCanvas style="max-width:600px;"></canvas>

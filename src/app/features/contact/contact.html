@@ -1,0 +1,19 @@
+<section class="contact-container">
+  <div class="contact-card">
+    <h2>Contactez-moi</h2>
+    <p>Remplissez le formulaire pour m’envoyer un message.</p>
+
+    <div *ngIf="result" [ngClass]="{'success': result.ok, 'error': !result.ok}">
+      {{ result.msg }}
+    </div>
+
+    <form (ngSubmit)="send()" #contactForm="ngForm">
+      <input type="text" name="name" [(ngModel)]="model.name" placeholder="Nom" required>
+      <input type="email" name="email" [(ngModel)]="model.email" placeholder="Email" required>
+      <input type="text" name="subject" [(ngModel)]="model.subject" placeholder="Sujet" required>
+      <textarea name="message" [(ngModel)]="model.message" placeholder="Message" required></textarea>
+
+      <button type="submit" [disabled]="sending">{{ sending ? 'Envoi...' : 'Envoyer' }}</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,92 @@
+.navbar {
+  background-color: #1f1f1f; /* gris très sombre */
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f5c518; /* doré clair */
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ffc107;
+    }
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+      .nav-link {
+        color: #f0f0f0;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s, transform 0.2s;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          bottom: -4px;
+          left: 0;
+          background-color: #f5c518;
+          transition: width 0.3s;
+        }
+
+        &:hover::after,
+        &.active::after {
+          width: 100%;
+        }
+
+        &:hover {
+          color: #f5c518;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: none;
+    color: #f0f0f0;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+  }
+
+  @media (max-width: 992px) {
+    .navbar-nav {
+      flex-direction: column;
+      background-color: #1f1f1f;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    .navbar-nav.show {
+      max-height: 500px; /* ajustable */
+    }
+
+    .navbar-toggler {
+      display: block;
+    }
+  }
+}

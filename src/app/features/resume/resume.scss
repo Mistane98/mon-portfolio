@@ -1,0 +1,133 @@
+.resume-section {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+  min-height: 80vh;
+}
+
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.resume-container h1 {
+  font-size: 2.5rem;
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+.resume-container p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #4f46e5;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 40px;
+  text-align: left;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 3px solid #4f46e5;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #111;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .resume-container h1 {
+    font-size: 2rem;
+  }
+
+  .resume-container p {
+    font-size: 1rem;
+  }
+
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 30px;
+  }
+
+  .timeline-item::before {
+    left: 3px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+}
+
+.download-cv {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #4f46e5;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #3730a3;
+  transform: translateY(-2px);
+}
+
+.btn-download:active {
+  transform: translateY(0);
+}
+.btn-download:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}

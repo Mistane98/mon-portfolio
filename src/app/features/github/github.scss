@@ -1,0 +1,119 @@
+/* Container général */
+:host {
+  display: block;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Titres */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1f3c88;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  color: #1f3c88;
+}
+
+/* Chargement */
+div[ng-reflect-ng-if="true"] {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Cartes des dépôts */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h5 {
+  margin: 0 0 10px;
+  color: #1f3c88;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Boutons */
+.btn-primary {
+  background-color: #1f3c88;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 5px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #3c55b0;
+  color: #fff;
+}
+
+/* Graphique */
+canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 12px 15px;
+  }
+
+  .btn-primary {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .card h5 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+}
