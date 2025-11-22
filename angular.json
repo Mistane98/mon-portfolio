@@ -34,6 +34,7 @@
               "src/styles.scss"
             ],
             "server": "src/main.server.ts",
+            "outputPath": "dist/mon-portfolio",
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
@@ -78,6 +79,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
